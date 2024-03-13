@@ -1,0 +1,91 @@
+%id.X 
+%id.Y
+
+%val.X
+%val.Y
+
+%plot(id.X, id.Y)
+%figure
+%plot(val.X,val.Y)
+
+for n= 1 : 50
+
+N=length(id.Y);
+    phi= zeros(N,n); 
+
+for i= 1 : N
+for j= 1:1: n
+    phi(i,j) = id.X(i)^(j-1); 
+
+end
+end
+
+theta =phi \ id.Y'; 
+y_id= phi * theta; 
+O=id.Y-y_id;
+
+
+M=length(val.Y);
+fi= zeros(M,n); 
+
+for k= 1 : M
+for l= 1:1: n
+
+fi(k,l) = val.X(k)^(l-1); 
+
+end
+end
+
+teta =fi \ val.Y'; 
+y_val= fi * teta; 
+P=val.Y-y_val;
+
+
+
+s=0;
+for i=1:N
+
+    s=s+O(i).^2;
+end
+
+MSE_id=(sum(s)/N); 
+
+MSE_id_v(n)=MSE_id;
+
+
+S=0;
+for i=1:M
+
+    S=s+P(i).^2;
+end
+
+
+MSE_val= (sum(S)/M); 
+
+MSE_val_v(n)= MSE_val;
+
+end
+
+
+
+plot(val.X,val.Y,val.X,y_val)
+title('Valori')
+figure;
+plot(1:n,MSE_id_v)
+title('MSE ID')
+figure
+plot(1:n,MSE_val_v)
+title('MSE VAL')
+
+
+
+
+
+
+
+
+
+
+
+
+
