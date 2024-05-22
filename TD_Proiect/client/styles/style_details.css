@@ -1,0 +1,157 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@300;400;500;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8e1e7; /* Very light pink background */
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-family: 'Lora', serif;
+  font-size: 2em;
+  color: #b63f73; /* Deep pink color for the title */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #b63f73; /* Deep pink color for labels */
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"], .form-group input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #f3a0b8; /* Light pink border */
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #fce4ec; /* Very light pink background */
+  font-family: 'Poppins', sans-serif;
+}
+
+button.btn {
+  padding: 10px 20px;
+  color: white;
+  background-color: #e57373; /* Bright pink button */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+button.btn:hover {
+  background-color: #ec407a; /* Darker pink on hover */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #f3a0b8; /* Light pink border */
+  border-radius: 4px;
+}
+
+li a {
+  color: #b63f73; /* Deep pink color for links */
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+button.btn-delete {
+  background-color: #ef5350; /* Bright red button */
+  margin-left: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+button.btn-delete:hover {
+  background-color: #e53935; /* Darker red on hover */
+}
+
+button.btn-update {
+  background-color: #ff8a65; /* Orange button */
+  margin-left: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+button.btn-update:hover {
+  background-color: #ff7043; /* Darker orange on hover */
+}
+
+button.btn-exit {
+  background-color: #b63f73; /* Deep pink button */
+  margin-left: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+button.btn-exit:hover {
+  background-color: #9f2e5b; /* Darker deep pink on hover */
+}
+
+.details {
+  line-height: 1.6;
+  font-size: 1.1em;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
+.details strong {
+  color: #b63f73; /* Deep pink color for strong text */
+  font-family: 'Lora', serif;
+}
+
+.details img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.details div {
+  margin-bottom: 10px;
+}
+
+.details .image {
+  text-align: center;
+}
+
+.details .image strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.navigation-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.navigation-buttons button {
+  margin: 0 10px;
+}

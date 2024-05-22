@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Makeup Product</title>
+  <link rel="stylesheet" href="styles/style_index.css">
+  <script src="libs/vue.js"></script>
+  <script src="libs/axios.js"></script>
+</head>
+<body>
+  <div class="container" id="update">
+    <h1>Update Makeup Product with ID: {{ id }}</h1>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" v-model="product.name" placeholder="Name">
+    </div>
+    <div class="form-group">
+      <label for="brand">Brand</label>
+      <input type="text" id="brand" v-model="product.brand" placeholder="Brand">
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" id="price" v-model="product.price" placeholder="Price">
+    </div>
+    <div class="form-group">
+      <label for="category">Category</label>
+      <input type="text" id="category" v-model="product.category" placeholder="Category">
+    </div>
+    <div class="form-group">
+      <label for="color">Color</label>
+      <input type="text" id="color" v-model="product.color" placeholder="Color">
+    </div>
+    <div class="form-group">
+      <label for="stock">Stock</label>
+      <input type="number" id="stock" v-model="product.stock" placeholder="Stock">
+    </div>
+    <div class="form-group">
+      <label for="rating">Rating</label>
+      <input type="number" id="rating" v-model="product.rating" placeholder="Rating">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" id="description" v-model="product.description" placeholder="Description">
+    </div>
+    <div class="form-group">
+      <label for="imageURL">Image URL</label>
+      <input type="text" id="imageURL" v-model="product.imageURL" placeholder="Image URL">
+    </div>
+    <button @click="updateProduct" class="btn">Save</button>
+    <p>{{ message }}</p>
+  </div>
+  <script src="src/update.js"></script>
+</body>
+</html>

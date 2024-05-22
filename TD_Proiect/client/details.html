@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="styles/style_details.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script src="libs/vue.js"></script>
+  <script src="libs/axios.js"></script>
+</head>
+<body>
+  <div class="container" id="details">
+    <h1>Details for Product ID: {{ id }}</h1>
+    <div class="details">
+      <div><strong>Name:</strong> {{ product.name }}</div>
+      <div><strong>Brand:</strong> {{ product.brand }}</div>
+      <div><strong>Price:</strong> {{ product.price }}</div>
+      <div><strong>Category:</strong> {{ product.category }}</div>
+      <div><strong>Color:</strong> {{ product.color }}</div>
+      <div><strong>Stock:</strong> {{ product.stock }}</div>
+      <div><strong>Rating:</strong> {{ product.rating }}</div>
+      <div><strong>Description:</strong> {{ product.description }}</div>
+      <div class="image">
+        <strong>Image:</strong>
+        <img :src="product.imageURL" alt="Product Image">
+      </div>
+      <div class="navigation-buttons">
+        <button @click="previousProduct" class="btn">Previous</button>
+        <button @click="nextProduct" class="btn">Next</button>
+        <button @click="exitToMainPage" class="btn btn-exit">Exit</button>
+      </div>
+    </div>
+  </div>
+  <script src="src/details.js"></script>
+</body>
+</html>
